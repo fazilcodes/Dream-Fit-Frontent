@@ -1,3 +1,128 @@
-.workout_card .card_img {
-    width: 5rem;
+#workout {
+    margin-top: 0;
+    margin-bottom: 5rem;
 }
+
+#workout > h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.workout_container {
+    display: grid;
+    grid-template-columns: 60% 30%;
+    gap: 10%;
+}
+
+.workout_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.workout_card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-primary);
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.workout_card:hover {
+    transform: translateY(-1rem);
+}
+
+.workout_card .card_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.workout_card .card_img {
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+
+
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    background: -webkit-linear-gradient(to right, var(--color-primary), #edbc52);
+    background: linear-gradient(to right,  var(--color-primary), #edbc52);
+    padding: 2.5rem;
+    border-radius: 10px;
+    max-width: 350px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #fff;
+  }
+  
+  .description {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: rgb(209 213 219);
+  }
+  
+  .form div {
+    display: flex;
+    max-width: 28rem;
+    margin-top: 1rem;
+    column-gap: 0.5rem;
+  }
+  
+  .form div input {
+    outline: none;
+    line-height: 1.5rem;
+    font-size: 0.875rem;
+    color: rgb(255 255 255 );
+    padding: 0.5rem 0.875rem;
+    background-color: rgb(255 255 255 / 0.05);
+    border: 1px solid rgba(253, 253, 253, 0.363);
+    border-radius: 0.375rem;
+    flex: 1 1 auto;
+  }
+  
+  .form div input::placeholder {
+    color: rgb(216, 212, 212);
+  }
+  
+  .form div input:focus {
+    border: 1px solid var(--color-bg);
+  }
+  
+  .form div button {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.625rem 0.875rem;
+    background-color: var(--color-bg);
+    border-radius: 0.375rem;
+    border: none;
+    outline: none;
+  }
+
+  .workout_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

@@ -39,7 +39,7 @@ const workoutImages = [
 const Workout = () => {
 
     const [Workout, setWorkout] = useState([]);
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
     const [visible, setVisible] = useState([]);
 
     useEffect(()=> {
@@ -52,7 +52,7 @@ const Workout = () => {
     return (
     <>
     <section id='workout'>
-        <h2>Daily Workouts</h2>
+        <h2>Daily Workout</h2>
         <div className="container workout_container">
             <div className="workout_cards">
                {Workout.slice(0, 6).map((work, index) => {
@@ -64,11 +64,22 @@ const Workout = () => {
                             ))}
                         </div>
                         <div className="card_info">
-                            {work}
+                            <h2>{work.toUpperCase()}</h2>
+                            <button className='btn btn-primary'>Know more</button>
                         </div>
                     </article>
                 </>
                })}
+            </div>
+            <div className="workout_right">
+                <form class="form">
+                    <span class="title">Subscribe to our newsletter.</span>
+                    <p class="description">Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt dolore.</p>
+                    <div>
+                        <input placeholder="Enter your email" type="email" name="email" id="email-address" />
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>

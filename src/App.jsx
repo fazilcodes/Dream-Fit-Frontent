@@ -5,6 +5,7 @@ import { Footer } from './components/Footer/Footer'
 import { Contact } from './components/Contact/Contact'
 import { About } from './components/About/About'
 import { Services } from './components/Services/Services'
+import  Workout  from './components/workout/Workout'
 
 
 export const App = () => {
@@ -12,6 +13,7 @@ export const App = () => {
     <>
         <Navbar />
         <Header />
+        <Workout />
         <About />
         <Services />
         <Contact /> 

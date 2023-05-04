@@ -9,6 +9,7 @@ import lower_legs from '../../assets/workout_img/lower legs.png'
 import neck from '../../assets/workout_img/neck.png'
 import upper_arms from '../../assets/workout_img/upper arms.png'
 import upper_legs from '../../assets/workout_img/upper legs.png'
+import shoulders from '../../assets/workout_img/shoulders.png'
 import waist from '../../assets/workout_img/waist.png'
 
 
@@ -29,36 +30,52 @@ const workoutImages = [
     {name: "lower arms", url: lower_arms},
     {name: "lower legs", url: lower_legs},
     {name: "neck", url: neck},
+    {name: "shoulder", url: shoulders},
     {name: "upper arms", url: upper_arms},
     {name: "upper legs", url: upper_legs},
     {name: "waist", url: waist},
 ]
 
+const shuffle = (array) => {
+    return array.sort(() => Math.random() - 0.5)
+}
 
 
 const Workout = () => {
 
     const [Workout, setWorkout] = useState([]);
     const [count, setCount] = useState(0);
-    const [visible, setVisible] = useState([]);
+    const [visible, setVisible] = useState(6);
 
     useEffect(()=> {
-        axios.request(options).then(function (response) {
-            setWorkout(response.data);
-        }).catch(function (error){
-            console.error(error)
-        })
+        // axios.request(options).then(function (response) {
+        //     // Created a Shuffle Function inorder to shuffle the Api output (array) 
+        //     setWorkout(shuffle(response.data));
+        // }).catch(function (error){
+        //     console.error(error)
+        // })
+        
+        axios.get('http://localhost:3000/bodyparts')
+        .then(response => setWorkout(shuffle(response.data.map(bodypart => bodypart.name))))
+        .catch(error => console.error(error));
     }, [])
+
+    const loadmore = () => {
+        setVisible((prev) => prev + 3)
+    }
+
+    
     return (
     <>
     <section id='workout'>
         <h2>Daily Workout</h2>
         <div className="container workout_container">
             <div className="workout_cards">
-               {Workout.slice(0, 6).map((work, index) => {
+               {Workout.slice(0, visible).map((work, index) => {
                 return <>
                     <article className='workout_card'>
                         <div className="card_img">
+                            {/* Below code is used to filter the images for its corresponding Api outputs */}
                             {workoutImages.filter(image => image.name === work).map(image => (
                                 <img key={image.name} src={image.url} alt={image.name} />
                             ))}
@@ -70,6 +87,9 @@ const Workout = () => {
                     </article>
                 </>
                })}
+               <div className='btn_container'>
+                <button onClick={loadmore} className='btn btn-primary newline'>Load More</button>
+               </div>
             </div>
             <div className="workout_right">
                 <form class="form">

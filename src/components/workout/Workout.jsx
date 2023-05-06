@@ -12,17 +12,6 @@ import upper_legs from '../../assets/workout_img/upper legs.png'
 import shoulders from '../../assets/workout_img/shoulders.png'
 import waist from '../../assets/workout_img/waist.png'
 
-
-const options = {
-    method: 'GET',
-    url: 'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
-    headers: {
-      'X-RapidAPI-Key': 'cfdfaf53d7msh928faaaeb0f614ap18ac25jsn559ed1dbe0f4',
-      'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-    }
-  };
-  
-
 const workoutImages = [
     {name: "back", url: back},
     {name: "cardio", url: cardio},
@@ -44,21 +33,32 @@ const shuffle = (array) => {
 const Workout = () => {
 
     const [Workout, setWorkout] = useState([]);
-    const [count, setCount] = useState(0);
+    const [modalData, setModalData] = useState({
+        id: '',
+        name: '',
+        exercises: []
+    })
+    const [modal, setModal] = useState(false)
     const [visible, setVisible] = useState(6);
+    const [modalslice, setModalSlice] = useState(3);
 
     useEffect(()=> {
-        // axios.request(options).then(function (response) {
-        //     // Created a Shuffle Function inorder to shuffle the Api output (array) 
-        //     setWorkout(shuffle(response.data));
-        // }).catch(function (error){
-        //     console.error(error)
-        // })
-        
         axios.get('http://localhost:3000/bodyparts')
-        .then(response => setWorkout(shuffle(response.data.map(bodypart => bodypart.name))))
+        .then(response => setWorkout(response.data.map(bodypart => bodypart.name)))
         .catch(error => console.error(error));
     }, [])
+
+    const showModalDetails = (id) => {
+        axios.get(`http://localhost:3000/bodyparts/${id}`)
+        .then(response => setModalData(response.data)
+        .catch(error => console.error(error)))
+    }
+
+    // useEffect(()=> {
+    //     axios.get('http://localhost:3000/bodyparts/${id}')
+    //     .then(response => setModalData((response.data)))
+    //     .catch(error => console.error(error));
+    // }, [])
 
     const loadmore = () => {
         setVisible((prev) => prev + 3)
@@ -82,7 +82,10 @@ const Workout = () => {
                         </div>
                         <div className="card_info">
                             <h2>{work.toUpperCase()}</h2>
-                            <button className='btn btn-primary'>Know more</button>
+                            <button className='btn btn-primary' onClick={() => {
+                                setModal(true)
+                                showModalDetails(index)
+                                }}>Know more</button>
                         </div>
                     </article>
                 </>
@@ -102,6 +105,28 @@ const Workout = () => {
                 </form>
             </div>
         </div>
+        {/* Modal */}
+        { modal && 
+        <div className='modal_section'>
+            <div className='container modal_container'>
+                <button className='btn btn-primary text-end' onClick={() => {setModal(false)}}> X </button>
+                <div className='modal_body'>
+                    {shuffle(modalData.exercises.slice(0, modalslice).map((exercise, index) =>{
+                        return <>
+                        <div className="exercise_container">
+                            <h2>{exercise.exercise.toUpperCase()}</h2>
+                            <h2>Difficulty: {exercise.difficulty.toUpperCase()}</h2>
+                            <img src={exercise.gif} alt="" />
+                        </div>
+                        </>
+                    }))}
+                </div>
+                <div className="modal_footer">
+                    <button className='close_modal-btn-2 btn btn-primary' onClick={() => setModal(false)}>Close</button>
+                    <button className='btn btn-primary' onClick={() => setModalSlice(loadmore)}>Load More</button>
+                </div>
+            </div>
+        </div> }
     </section>
     </>
   )

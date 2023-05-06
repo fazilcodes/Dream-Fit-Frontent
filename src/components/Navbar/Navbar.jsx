@@ -5,6 +5,8 @@ import {BiMenu} from 'react-icons/bi'
 import {AiOutlineClose} from 'react-icons/ai'
 import { useState } from 'react'
 
+import { HashLink } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
 
@@ -16,12 +18,14 @@ export const Navbar = () => {
         <div className='container navbar_container'>
           <h2>Dream-Fit</h2>
           <ul className={toggle? 'nav_items-responsive': 'nav-items'}>
-              <li><a href="#" onClick={() => setActive('#')} className={ active === '#' ? 'active_link' : '' }>Home</a></li>
-              <li><a href="#workout" onClick={() => setActive('#workout')} className={ active === '#workout' ? 'active_link' : '' }>Workout</a></li>
-              <li><a href="#news" onClick={() => setActive('#news')} className={ active === '#news' ? 'active_link' : '' }>News</a></li>
-              <li><a href="#contact" onClick={() => setActive('#contact')} className={ active === '#contact' ? 'active_link' : '' }>Contact</a></li>
+              <li><HashLink to="/#" onClick={() => setActive('#')} className={ active === '#' ? 'active_link' : '' }>Home</HashLink></li>
+              <li><HashLink to="/#workout" onClick={() => setActive('#workout')} className={ active === '#workout' ? 'active_link' : '' }>Workout</HashLink></li>
+              <li><HashLink to="/#workout" onClick={() => setActive('#news')} className={ active === '#news' ? 'active_link' : '' }>News</HashLink></li>
+              <li><HashLink to="/#contact" onClick={() => setActive('#contact')} className={ active === '#contact' ? 'active_link' : '' }>Contact</HashLink></li>
           </ul>
-          <button className='theme_icon'><GiWeightLiftingUp/></button>
+          <Link to="/api" className="theme_icon">
+            <GiWeightLiftingUp />
+          </Link>
           <button onClick={() => settoggle(!toggle)} className='nav_toggle-btn'>{toggle? <AiOutlineClose/> : <BiMenu />}</button>
         </div>
     </nav>

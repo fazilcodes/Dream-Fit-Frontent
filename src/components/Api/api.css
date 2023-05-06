@@ -1,0 +1,9 @@
+#api_section {
+    margin-top: 10rem;
+}
+
+.search_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}

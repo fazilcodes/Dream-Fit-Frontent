@@ -10,6 +10,7 @@
     outline: 0;
 }
 
+
 :root {
     --color-bg: #232631;
     --color-bg-variant: #485172;
@@ -38,7 +39,11 @@ body {
     background: var(--color-bg);
     color: white;
     line-height: 1.7;
+    background-image: url(./assets/texture.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 
 /* ------------------General Styles----------------- */

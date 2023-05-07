@@ -54,12 +54,6 @@ const Workout = () => {
         .catch(error => console.error(error)))
     }
 
-    // useEffect(()=> {
-    //     axios.get('http://localhost:3000/bodyparts/${id}')
-    //     .then(response => setModalData((response.data)))
-    //     .catch(error => console.error(error));
-    // }, [])
-
     const loadmore = () => {
         setVisible((prev) => prev + 3)
     }
@@ -91,7 +85,7 @@ const Workout = () => {
                 </>
                })}
                <div className='btn_container'>
-                <button onClick={loadmore} className='btn btn-primary newline'>Load More</button>
+               {visible < Workout.length && ( <button className='btn btn-primary' onClick={loadmore}>Load More</button>)}
                </div>
             </div>
             <div className="workout_right">

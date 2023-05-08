@@ -4,11 +4,9 @@ import axios from 'axios';
 import back from '../../assets/workout_img/back.png'
 import cardio from '../../assets/workout_img/cardio.png'
 import chest from '../../assets/workout_img/chest.png'
-import lower_arms from '../../assets/workout_img/lower arms.png'
 import lower_legs from '../../assets/workout_img/lower legs.png'
 import neck from '../../assets/workout_img/neck.png'
 import upper_arms from '../../assets/workout_img/upper arms.png'
-import upper_legs from '../../assets/workout_img/upper legs.png'
 import shoulders from '../../assets/workout_img/shoulders.png'
 import waist from '../../assets/workout_img/waist.png'
 
@@ -16,13 +14,11 @@ const workoutImages = [
     {name: "back", url: back},
     {name: "cardio", url: cardio},
     {name: "chest", url: chest},
-    {name: "lower arms", url: lower_arms},
-    {name: "lower legs", url: lower_legs},
+    {name: "legs", url: lower_legs},
     {name: "neck", url: neck},
     {name: "shoulder", url: shoulders},
-    {name: "upper arms", url: upper_arms},
-    {name: "upper legs", url: upper_legs},
-    {name: "waist", url: waist},
+    {name: "arms", url: upper_arms},
+    {name: "Abs", url: waist},
 ]
 
 const shuffle = (array) => {
@@ -62,7 +58,7 @@ const Workout = () => {
     return (
     <>
     <section id='workout'>
-        <h2>Daily Workout</h2>
+        <h2>Home Workout</h2>
         <div className="container workout_container">
             <div className="workout_cards">
                {Workout.slice(0, visible).map((work, index) => {

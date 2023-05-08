@@ -49,7 +49,9 @@ export const Api = () => {
           {workouts.slice(0, loadmore).map((workout) => (
             <div className="api_result">
               <h2 key={workout.id}>{workout.exercise.toUpperCase()}</h2>
-              <img src={workout.gif_url} alt="" />
+              <div className="image_gif-container">
+                <img src={workout.gif_url} alt="" />
+              </div>
             </div>
           ))}
         </div>

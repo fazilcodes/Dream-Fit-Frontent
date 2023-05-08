@@ -29,7 +29,7 @@ export const Header = () => {
                             <p className='react-icon'><MdFoodBank /></p>
                         </div>
                         <div className="info_icon_right">
-                            <h4>Daily Protien Tips</h4>
+                            <h4>Daily Motivation</h4>
                             <p>Lorem ipsum dolor sit amet consectetur.</p>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ export const Header = () => {
                             <p className='react-icon'><MdFoodBank /></p>
                         </div>
                         <div className="info_icon_right">
-                            <h4>Daily Protien Tips</h4>
+                            <h4>Daily Health</h4>
                             <p>Lorem ipsum dolor sit amet consectetur.</p>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ export const Header = () => {
                             <p className='react-icon'><MdFoodBank /></p>
                         </div>
                         <div className="info_icon_right">
-                            <h4>Daily Protien Tips</h4>
+                            <h4>News</h4>
                             <p>Lorem ipsum dolor sit amet consectetur.</p>
                         </div>
                     </div>

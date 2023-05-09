@@ -87,7 +87,7 @@ const Workout = () => {
             <div className="workout_right">
                 <form class="form">
                     <span class="title">Subscribe to our newsletter.</span>
-                    <p class="description">Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt dolore.</p>
+                    <p class="description">Get fit and stay up-to-date with our fitness newsletter. Expert tips, workouts, and nutrition advice delivered to your inbox every week.</p>
                     <div>
                         <input placeholder="Enter your email" type="email" name="email" id="email-address" />
                         <button type="submit">Subscribe</button>

@@ -43,6 +43,10 @@
     object-fit: fill;
 }
 
+span {
+    color: var(--color-primary);
+}
+
 .api_result img {
     width: 100%;
     border-radius: 1rem;
@@ -51,6 +55,10 @@
 
 .loadmore {
     margin-top: 3rem;
+}
+
+.search_box input {
+    font-size: 1rem;
 }
 
 /* ------------Tablet Media Query------------ */

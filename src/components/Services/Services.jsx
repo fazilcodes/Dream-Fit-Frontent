@@ -11,84 +11,84 @@ export const Services = () => {
       <div className="container services_container">
         <article className="service">
           <div className="service_head">
-            <h3>UI/UX Design</h3>
+            <h3>Personal Training</h3>
           </div>
           <ul className='service_list'>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Exercise programming: Designing personalized exercise plans </p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Nutrition coaching: Providing guidance on healthy eating habits</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Injury prevention and rehabilitation: Developing strategies to prevent injuries during exercise</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Motivation and accountability: Keeping clients motivated and on track with their fitness goals</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Lifestyle coaching: Addressing factors such as stress, sleep, and hydration to help clients optimize their overall health</p>
             </li>
           </ul>
         </article>
 
         <article className="service">
           <div className="service_head">
-            <h3>Web Development</h3>
+            <h3>Diet Plans</h3>
           </div>
           <ul className='service_list'>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Macronutrient balance: Developing a diet plan that balances intake of carbohydrates, protein, and fat</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Calorie tracking: Using tools such as food diaries</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Food sensitivity and allergies: Identifying and eliminating foods that cause digestive issues</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Supplementation: Recommending supplements to fill gaps in clients' diets or to support specific health</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Behavioral modification: Addressing psychological factors such as emotional eating, cravings</p>
             </li>
           </ul>
         </article>
 
         <article className="service">
           <div className="service_head">
-            <h3>Designing</h3>
+            <h3>Premium Coaching</h3>
           </div>
           <ul className='service_list'>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Personalized programming: Creating a customized training and nutrition plan</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Regular feedback and assessment: Providing ongoing feedback on progress, technique</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Accountability and motivation: Regular check-ins, goal-setting, and accountability strategies</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>Lifestyle coaching: Addressing factors such as sleep, stress, and overall health</p>
             </li>
             <li>
               <GiCheckMark className='service_list-icon'/>
-              <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+              <p>24/7 support: Offering continuous support and guidance to clients through phone, email, or messaging services</p>
             </li>
           </ul>
         </article>

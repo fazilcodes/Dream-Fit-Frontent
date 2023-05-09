@@ -37,7 +37,7 @@ export const Api = () => {
   return (
     <section id="api_section">
       <div className="container api_container">
-        <h1 className='api_title'>Dream-Fit API</h1>
+        <h1 className='api_title'>Dream-Fit <span>API</span></h1>
         <div className="search_box">
           <input type="text" placeholder="Enter the Muscle" onChange={(event) => setMuscle(event.target.value)} />
           <input type="text" placeholder="Enter Difficulty" onChange={(event) => setDifficulty(event.target.value)} />

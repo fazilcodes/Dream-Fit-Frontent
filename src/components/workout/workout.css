@@ -225,6 +225,10 @@
       grid-template-columns: 1fr 1fr;
     }
 
+    .workout_right {
+      margin-top: -4rem;
+    }
+
 
     /* modal */
 

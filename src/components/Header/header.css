@@ -22,6 +22,26 @@ header {
     margin-bottom: 3rem;
 }
 
+.protein_hover, .motivation_hover,
+.news_hover, .health_hover {
+    position: fixed;
+    bottom: 3rem;
+    left: 2rem;
+    background: rgba(0, 0, 20, 0.6);
+    padding: 1rem;
+    border-radius: 2rem;
+    display: none;
+    transition: var(--transition);
+}
+
+.one:hover .protein_hover,
+.two:hover .motivation_hover,
+.three:hover .health_hover,
+.four:hover .news_hover
+{
+    display: inline-block;
+}
+
 .left_info-top h1 {
     font-size: 3rem;
 }
@@ -45,6 +65,7 @@ header {
     cursor: pointer;
     transition: var(--transition);
 }
+
 
 .info_contianer:hover {
     border-color: var(--color-white);

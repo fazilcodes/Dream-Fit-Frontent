@@ -87,7 +87,7 @@
 @media screen and (max-width: 1024px) {
 
     #about {
-        margin-top: 8rem;
+        margin-top: 10rem;
     }
 
     .about_container {
@@ -115,7 +115,7 @@
 @media screen and (max-width: 600px) {
 
     #about {
-        margin-top: 8rem;
+        margin-top: 10rem;
     }
 
     .about_me {

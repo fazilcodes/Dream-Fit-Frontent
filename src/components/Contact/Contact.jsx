@@ -18,22 +18,22 @@ export const Contact = () => {
           <article className='contact_option'>
             <AiOutlineMail className='contact_option-icon'/>
             <h4>Email</h4>
-            <h5>contact@me.com</h5>
-            <a href="mailto:" target='_blank'>Send Message</a>
+            <h5>fazicodes@me.com</h5>
+            <a href="mailto:" target="_blank" rel="noopener">Send Message</a>
           </article>
           
           <article className='contact_option'>
             <AiOutlineFacebook className='contact_option-icon'/>
             <h4>Facebook</h4>
-            <h5>Facebook Name</h5>
-            <a href="https://m.me/facebookname" target='_blank'>Send Message</a>
+            <h5>fazicodes@fb</h5>
+            <a href="https://m.me/facebookname" target="_blank" rel="noopener">Send Message</a>
           </article>
 
           <article className='contact_option'>
             <AiOutlineWhatsApp className='contact_option-icon'/>
             <h4>Whatsapp</h4>
-            <h5>Number here</h5>
-            <a href="https://api.whatsapp.com/send?phone=+917736222685" target='_blank'>Send Message</a>
+            <h5>+91 7736222685</h5>
+            <a href="https://api.whatsapp.com/send?phone=+917736222685" target="_blank" rel="noopener">Send Message</a>
           </article>
         </div>
 

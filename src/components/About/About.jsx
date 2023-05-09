@@ -24,25 +24,24 @@ export const About = () => {
             <article className="about_card">
               <FiAward className='about_icon'/>
               <h5>Experience</h5>
-              <small>1+ Years Working</small>
+              <small>10+ Years Working</small>
             </article>
 
             <article className="about_card">
               <RiUserStarLine className='about_icon'/>
               <h5>Clients</h5>
-              <small>100+ Crossed</small>
+              <small>1000+ Crossed</small>
             </article>
 
             <article className="about_card">
               <AiOutlineFundProjectionScreen className='about_icon'/>
-              <h5>Projects</h5>
-              <small>30+</small>
+              <h5>Transformation</h5>
+              <small>300+ Kings</small>
             </article>
           </div>
 
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, a molestiae cumque commodi iste fugit vitae.
-             Commodi ut necessitatibus deleniti repudiandae ex expedita, dolorum, sapiente perferendis delectus vel cupiditate ad!
+          We are a passionate team of fitness enthusiasts committed to helping you achieve your health goals. Join us on your fitness journey and unleash your full potential.
           </p>
 
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>

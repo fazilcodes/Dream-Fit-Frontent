@@ -39,13 +39,13 @@ const Workout = () => {
     const [modalslice, setModalSlice] = useState(3);
 
     useEffect(()=> {
-        axios.get('http://localhost:3000/bodyparts')
+        axios.get('https://gym-api-rfh1.onrender.com/bodyparts')
         .then(response => setWorkout(response.data.map(bodypart => bodypart.name)))
         .catch(error => console.error(error));
     }, [])
 
     const showModalDetails = (id) => {
-        axios.get(`http://localhost:3000/bodyparts/${id}`)
+        axios.get(`https://gym-api-rfh1.onrender.com/bodyparts/${id}`)
         .then(response => setModalData(response.data)
         .catch(error => console.error(error)))
     }

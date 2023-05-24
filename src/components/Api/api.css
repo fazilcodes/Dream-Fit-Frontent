@@ -74,4 +74,8 @@ span {
     .search_result-container {
         grid-template-columns: 1fr;
     }
+
+    .search_box {
+        grid-template-columns: 1fr;
+    }
 }

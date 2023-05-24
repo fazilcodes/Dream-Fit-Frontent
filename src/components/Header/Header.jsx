@@ -28,19 +28,19 @@ export const Header = () => {
     }, [])
 
     useEffect(()=> {
-        axios.get('http://localhost:3000/protein_tips')
+        axios.get('https://gym-api-rfh1.onrender.com/protein_tips')
         .then(response => setProtein(response.data))
         .catch(error => console.error(error));
     }, [])
     
     useEffect(()=> {
-        axios.get('http://localhost:3000/push_ups')
+        axios.get('https://gym-api-rfh1.onrender.com/push_ups')
         .then(response => setPushups(response.data))
         .catch(error => console.error(error));
     }, [])
 
     useEffect(()=> {
-        axios.get('http://localhost:3000/health')
+        axios.get('https://gym-api-rfh1.onrender.com/health')
         .then(response => setHealth(response.data))
         .catch(error => console.error(error));
     }, [])

@@ -15,14 +15,15 @@ export const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    e.target.reset()
-
+    
     emailjs.sendForm('service_2my2i49', 'template_m7amtao', form.current, '3yEPsLX58_MnwNxRv')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    .then((result) => {
+      console.log(result.text);
+    }, (error) => {
+      console.log(error.text);
+    });
+
+    e.target.reset()
   };
 
   return (
@@ -55,8 +56,8 @@ export const Contact = () => {
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder='Full Name' required/>
-          <input type="email" name='email' placeholder='Email' required/>
+          <input type="text" name="fullname" placeholder='Full Name' required/>
+          <input type="email" name="email" placeholder='Email' required/>
           <textarea name="message" rows="7" placeholder='Message' required></textarea>
           <button type='submit' className='btn btn-primary'>Send Message</button>
         </form>

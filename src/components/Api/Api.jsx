@@ -14,7 +14,7 @@ export const Api = () => {
 
   const fetchMuscleData = useCallback(async () => {
     try {
-      const response = await fetch(`http://localhost:3000/Muscle?name=${muscle.toLowerCase()}`);
+      const response = await fetch(`https://gym-api-rfh1.onrender.com/Muscle?name=${muscle.toLowerCase()}`);
       const data = await response.json();
       const muscles = data[0];
 

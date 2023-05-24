@@ -4,7 +4,7 @@
 
 #about > h2 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-size: 3rem;
 }
 
@@ -116,6 +116,10 @@
 
     #about {
         margin-top: 10rem;
+    }
+
+    #about > h2 {
+        margin-bottom: 5rem;
     }
 
     .about_me {

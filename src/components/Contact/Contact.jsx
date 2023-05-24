@@ -27,7 +27,7 @@ export const Contact = () => {
 
   return (
     <section id='contact'>
-      <h2>Contact</h2>
+      <h2 className='contact_head'>Contact</h2>
 
       <div className="container contact_container">
 
@@ -35,7 +35,7 @@ export const Contact = () => {
           <article className='contact_option'>
             <AiOutlineMail className='contact_option-icon'/>
             <h4>Email</h4>
-            <h5>fazicodes@me.com</h5>
+            <h5>fazilthekkan01@gmail.com</h5>
             <a href="mailto:@fazilthekkan01@gmail.com" target="_blank" rel="noreferrer">Send Message</a>
           </article>
           

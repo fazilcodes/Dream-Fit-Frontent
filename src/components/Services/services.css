@@ -1,6 +1,6 @@
 #services > h2 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-size: 3rem;
 }
 
@@ -76,5 +76,9 @@
     .services_container {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    #services > h2 {
+        margin-bottom: 5rem;
     }
 }

@@ -9,7 +9,7 @@ import { GiHealthNormal, GiMuscleUp } from 'react-icons/gi'
 
 export const Header = () => {
 
-    const [motivation, setMotivation] = useState("")
+    const [motivation, setMotivation] = useState({})
     const [protein, setProtein] = useState([])
     const [pushups, setPushups] = useState([])
     const [health, setHealth] = useState([])
@@ -22,9 +22,10 @@ export const Header = () => {
     const randomHealth = health[Math.floor(Math.random() * health.length)];
 
     useEffect(()=> {
-        axios.get('https://animechan.vercel.app/api/random')
+        axios.get('https://api.quotable.io/random')
         .then(response => setMotivation(response.data))
         .catch(error => console.error(error));
+        
     }, [])
 
     useEffect(()=> {
@@ -73,7 +74,7 @@ export const Header = () => {
                         <div className="info_icon_right">
                             <h4>Daily Motivation</h4>
                             <p>Let's get some motivation to boost the adrenaline!</p>
-                            <h3 className='motivation_hover'> <SlEnergy /> {motivation && motivation.quote}</h3>
+                            <h3 className='motivation_hover'> <SlEnergy /> {motivation.content}</h3>
                         </div>
                     </div>
                     <div className="info_contianer three">

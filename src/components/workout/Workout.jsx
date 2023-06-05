@@ -63,7 +63,7 @@ const Workout = () => {
             <div className="workout_cards">
                {Workout.slice(0, visible).map((work, index) => {
                 return <>
-                    <article className='workout_card'>
+                    <article key={index} className='workout_card'>
                         <div className="card_img">
                             {/* Below code is used to filter the images for its corresponding Api outputs */}
                             {workoutImages.filter(image => image.name === work).map(image => (
@@ -103,7 +103,7 @@ const Workout = () => {
                 <div className='modal_body'>
                     {shuffle(modalData.exercises.slice(0, modalslice).map((exercise, index) =>{
                         return <>
-                        <div className="exercise_container">
+                        <div key={index} className="exercise_container">
                             <h2>{exercise.exercise.toUpperCase()}</h2>
                             <h2>Difficulty: {exercise.difficulty.toUpperCase()}</h2>
                             <img src={exercise.gif} alt="" />

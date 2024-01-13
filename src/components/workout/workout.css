@@ -196,6 +196,11 @@
       grid-template-columns: 1fr;
     }
 
+    .reverse {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+
     .form {
       max-width: 750px;
     }

@@ -84,7 +84,7 @@ const Workout = () => {
                {visible < Workout.length && ( <button className='btn btn-primary' onClick={loadmore}>Load More</button>)}
                </div>
             </div>
-            <div className="workout_right">
+            <div className="workout_right reverse">
                 <form class="form">
                     <span class="title">Subscribe to our newsletter.</span>
                     <p class="description">Get fit and stay up-to-date with our fitness newsletter. Expert tips, workouts, and nutrition advice delivered to your inbox every week.</p>
